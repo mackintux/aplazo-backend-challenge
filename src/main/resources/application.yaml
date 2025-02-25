@@ -1,0 +1,23 @@
+# Server Configuration
+server:
+  port: ${SERVER_PORT:8080}
+  error:
+    include-stacktrace: never
+
+# Spring Configurations
+spring:
+  application:
+    name: ${SPRING_APPLICATION_NAME:aplazo-backend-challenge}
+
+  profiles:
+    active: dev
+
+# Swagger Configuration
+springdoc:
+  swagger-ui:
+    path: /api-docs
+    enabled: true
+  api-docs:
+    enabled: true
+
+# Constants

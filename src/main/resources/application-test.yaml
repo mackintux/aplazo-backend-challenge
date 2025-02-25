@@ -1,0 +1,15 @@
+# Spring Configurations
+spring:
+  # Data Source Configurations
+  datasource:
+    url: jdbc:postgresql://localhost:5432/${SPRING_DATASOURCE_DB:db_test}
+    driver-class-name: ${SPRING_DATASOURCE_DCN:org.postgresql.Driver}
+    username: ${SPRING_DATASOURCE_USERNAME:user}
+    password: ${SPRING_DATASOURCE_PASSWORD:pass}
+
+  # JPA Configurations
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
